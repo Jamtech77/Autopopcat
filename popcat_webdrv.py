@@ -1,8 +1,9 @@
 from selenium import webdriver
 import threading
 
-options=webdriver.ChromeOptions()
-driver = webdriver.Chrome(chrome_options=options)
+chrome_options=webdriver.ChromeOptions()
+chrome_options.add_argument('--disable-gpu')
+driver = webdriver.Chrome(options=chrome_options)
 
 url= u"https://popcat.click/"
 driver.get(url)
